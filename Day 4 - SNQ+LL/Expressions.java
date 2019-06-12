@@ -15,7 +15,7 @@ public class Main
 	    String exp = s.nextLine();
 	    String[] arr = exp.split(" ");
 	    
-	    //System.out.println(evalInfix(arr));
+	    System.out.println(evalInfix(arr));
 	    System.out.println(infixToPrefix(arr));
 	    System.out.println(infixToPostfix(arr));
 	    
