@@ -1,6 +1,6 @@
 import java.util.*;
  
- public class Main {
+ public class D3_partition_linked_list {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.

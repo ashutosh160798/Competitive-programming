@@ -1,6 +1,6 @@
 import java.util.*;
  
- public class Main {
+ public class D3_merge_multiple_sorted_linked_lists {
      
      
      // -----------------------------------------------------

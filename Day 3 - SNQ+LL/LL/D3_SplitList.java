@@ -1,6 +1,6 @@
 import java.util.*;
    
-   public class Main {
+   public class D3_SplitList {
    
        // -----------------------------------------------------
        // This is a functional problem. Only this function has to be written.

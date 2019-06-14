@@ -1,34 +1,23 @@
 import java.util.*;
  
- public class Main {
+ public class D3_modular_node_in_linkedlist {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // This takes as input the head of the linked list.
-     // It should return the head of the modified linked list.
- 
-     public static Node removeDuplicates(Node head) {
+     // It takes as input the head of the linked list and k.
+     // It should return the data value of modular node.
+     public static int moduarNode(Node head, int k) {
          
-         Node prev = head;
-         Node curr = head;
-         while(curr.next!=null){
-             if(curr.data==curr.next.data){
-                 prev.next = curr.next;
-                 curr = curr.next;
-             }else{
-                 prev = curr;
-                 curr = curr.next;
+         int modular = -1;
+         for(Node temp = head;temp!=null;temp=temp.next){
+             if(temp.data%k==0){
+                 modular = temp.data;
              }
-             
          }
-         if(head.data==head.next.data){
-             return head.next;
-         }
-         return head;
          
+         return modular;
          
      }
- 
      // -----------------------------------------------------
  
      static Node head1;
@@ -46,8 +35,9 @@ import java.util.*;
              tail = insert(tail, a);
          }
  
-         head1 = removeDuplicates(head1);
-         display(head1);
+         int k = sc.nextInt();
+ 
+         System.out.println(moduarNode(head1, k));
  
      }
  

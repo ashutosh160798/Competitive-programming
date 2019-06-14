@@ -1,30 +1,48 @@
 import java.util.*;
  
- public class Main {
+ public class D3_addOne {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // This function takes as input the head of the linked list.
-     // It should return the head of the modified list.
-     public static Node Delete(Node head) {
+     // It takes as input the head of the linked list. It should return the
+     // head of the modified linked list.
+ 
+     public static Node plusOne(Node n) {
          
-         if(head.next==null){
-             return null;
+         
+         Node nn=reverseLL(n);
+         Node temp = nn;
+         int carry=1;
+         int data=0;
+         while(nn!=null){
+             data = nn.data+carry;
+             carry = data/10;
+             nn.data = (carry==0)?data:data%10;
+             nn=nn.next;
+         }
+         if(carry==1){
+             Node newNode = new Node(1);
+             temp = reverseLL(temp);
+             newNode.next = temp;
+             return newNode;
+             
          }
          
-         Node slow = head;
-         Node fast = head;
+         return reverseLL(temp);
+         
+         
+     }
+     
+     public static Node reverseLL(Node head){
          Node prev = null;
-         while(fast!=null&&fast.next!=null){
-             prev = slow;
-             slow = slow.next;
-             fast = fast.next.next;
+         Node curr = head;
+         while(curr!=null){
+             Node nex = curr.next;
+             curr.next = prev;
+             prev = curr;
+             curr = nex;
          }
-         prev.next = slow.next;
-         slow.next = null;
-         return head;
-         
-         
+         return prev;
      }
  
      // -----------------------------------------------------
@@ -44,7 +62,7 @@ import java.util.*;
              tail = insert(tail, a);
          }
  
-         head1 = Delete(head1);
+         head1 = plusOne(head1);
          display(head1);
  
      }
@@ -88,7 +106,6 @@ import java.util.*;
          for (Node node = head; node != null; node = node.next) {
              System.out.print(node.data + " ");
          }
-         System.out.println();
      }
  
  }

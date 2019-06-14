@@ -1,61 +1,32 @@
 import java.util.*;
  
- public class Main {
- 
-     static Node left;
+ public class D3_remove_all_duplicate_nodes_in_sorted_linked_list {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // This function takes as input the head of the linked list.
-     // It should return true if list is palindrome, else return false.
+     // This takes as input the head of the linked list.
+     // It should return the head of the modified linked list.
  
-     public static boolean isPalindrome(Node head) {
+     public static Node removeDuplicates(Node head) {
          
-         Node[] twoNodes = split(head);
-         Node n1 = twoNodes[0];
-         Node n2 = reverseLL(twoNodes[1]);
-         
-         while(n2!=null){
-             if(n1.data!=n2.data){
-                 return false;
-             }
-             n1=n1.next;
-             n2=n2.next;
-         }
-         return true;
-         
-         
-     }
-     
-     
-     
-     static Node[] split(Node head){
-         Node slow=head;
-         Node prev=null;
-         Node fast=head;
-         
-         while(fast!=null&&fast.next!=null){
-             prev=slow;
-             slow=slow.next;
-             fast=fast.next.next;
-         }
-        if(fast!=null){
-            prev=slow;
-            slow=slow.next;
-        }
-        prev.next=null;
-        return new Node[]{head,slow};
-     }
-     public static Node reverseLL(Node head){
-         Node prev = null;
+         Node prev = head;
          Node curr = head;
-         while(curr!=null){
-             Node nex = curr.next;
-             curr.next = prev;
-             prev = curr;
-             curr = nex;
+         while(curr.next!=null){
+             if(curr.data==curr.next.data){
+                 prev.next = curr.next;
+                 curr = curr.next;
+             }else{
+                 prev = curr;
+                 curr = curr.next;
+             }
+             
          }
-         return prev;
+         if(head.data==head.next.data){
+             return head.next;
+         }
+         return head;
+         
+         
      }
  
      // -----------------------------------------------------
@@ -75,11 +46,8 @@ import java.util.*;
              tail = insert(tail, a);
          }
  
-         if (isPalindrome(head1)) {
-             System.out.println("1");
-         } else {
-             System.out.println("0");
-         }
+         head1 = removeDuplicates(head1);
+         display(head1);
  
      }
  
@@ -96,7 +64,7 @@ import java.util.*;
      }
  
      /*
-      * Input Parameters: tail: head of the linked list in which a new node is to
+      * Input Parameters: tail: tail of the linked list in which a new node is to
       * be inserted. data: the data value of the node which is to be inserted.
       * 
       * Return Value: tail of the linked list/the node that is inserted

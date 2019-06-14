@@ -1,38 +1,51 @@
-import java.util.*;
+import java.util.Scanner;
  
- public class Main {
+ public class D3_is_linked_list_palindrome {
+ 
+     static Node left;
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // It takes as input the head of the linked list. It should return the
-     // head of the modified linked list.
+     // This function takes as input the head of the linked list.
+     // It should return true if list is palindrome, else return false.
  
-     public static Node plusOne(Node n) {
+     public static boolean isPalindrome(Node head) {
          
+         Node[] twoNodes = split(head);
+         Node n1 = twoNodes[0];
+         Node n2 = reverseLL(twoNodes[1]);
          
-         Node nn=reverseLL(n);
-         Node temp = nn;
-         int carry=1;
-         int data=0;
-         while(nn!=null){
-             data = nn.data+carry;
-             carry = data/10;
-             nn.data = (carry==0)?data:data%10;
-             nn=nn.next;
+         while(n2!=null){
+             if(n1.data!=n2.data){
+                 return false;
+             }
+             n1=n1.next;
+             n2=n2.next;
          }
-         if(carry==1){
-             Node newNode = new Node(1);
-             temp = reverseLL(temp);
-             newNode.next = temp;
-             return newNode;
-             
-         }
-         
-         return reverseLL(temp);
+         return true;
          
          
      }
      
+     
+     
+     static Node[] split(Node head){
+         Node slow=head;
+         Node prev=null;
+         Node fast=head;
+         
+         while(fast!=null&&fast.next!=null){
+             prev=slow;
+             slow=slow.next;
+             fast=fast.next.next;
+         }
+        if(fast!=null){
+            prev=slow;
+            slow=slow.next;
+        }
+        prev.next=null;
+        return new Node[]{head,slow};
+     }
      public static Node reverseLL(Node head){
          Node prev = null;
          Node curr = head;
@@ -62,8 +75,11 @@ import java.util.*;
              tail = insert(tail, a);
          }
  
-         head1 = plusOne(head1);
-         display(head1);
+         if (isPalindrome(head1)) {
+             System.out.println("1");
+         } else {
+             System.out.println("0");
+         }
  
      }
  
@@ -80,7 +96,7 @@ import java.util.*;
      }
  
      /*
-      * Input Parameters: tail: tail of the linked list in which a new node is to
+      * Input Parameters: tail: head of the linked list in which a new node is to
       * be inserted. data: the data value of the node which is to be inserted.
       * 
       * Return Value: tail of the linked list/the node that is inserted

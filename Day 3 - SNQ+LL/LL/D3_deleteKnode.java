@@ -1,23 +1,34 @@
 import java.util.*;
  
- public class Main {
+ public class D3_deleteKnode {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // It takes as input the head of the linked list and k.
-     // It should return the data value of modular node.
-     public static int moduarNode(Node head, int k) {
+     // This takes as input the head of the linked list and k.
+     // It should return the head of the modified linked list.
+ 
+     public static Node delete(Node n, int k) {
          
-         int modular = -1;
-         for(Node temp = head;temp!=null;temp=temp.next){
-             if(temp.data%k==0){
-                 modular = temp.data;
-             }
+         Node prev = null;
+         Node curr = n;
+         int count=1;
+         if(k==0){
+             return n;
          }
          
-         return modular;
+         while(curr!=null){
+             if(count%k==0){
+                 prev.next = curr.next;
+             }
+             prev=curr;
+             curr=curr.next;
+             count++;
+             
+         }
+         return n;
          
      }
+ 
      // -----------------------------------------------------
  
      static Node head1;
@@ -37,7 +48,8 @@ import java.util.*;
  
          int k = sc.nextInt();
  
-         System.out.println(moduarNode(head1, k));
+         head1 = delete(head1, k);
+         display(head1);
  
      }
  

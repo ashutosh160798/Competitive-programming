@@ -1,6 +1,6 @@
 import java.util.*;
     
-    public class Main {
+    public class D3_occurence_of_a_number_in_linked_list {
     
         // -----------------------------------------------------
         // This is a functional problem. Only this function has to be written.

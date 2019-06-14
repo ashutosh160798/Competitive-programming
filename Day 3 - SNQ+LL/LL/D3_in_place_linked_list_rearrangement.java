@@ -1,24 +1,67 @@
 import java.util.*;
  
- public class Main {
+ public class D3_in_place_linked_list_rearrangement {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // It takes as input the head of the linked list and k.
-     // It should return the data value of modular node.
-     public static int moduarNode(Node head, int k) {
+     // It takes as input the head of the linked list.
+     // It should return the head of the rearranged list.
+     public static Node rearrange(Node head) {
          
-         int modular = -1;
-         int counter = 1;
-         for(Node temp = head;temp!=null;temp=temp.next){
-             if(counter++%k==0){
-                 modular = temp.data;
-             }
+         Node[] twoNodes = split(head);
+         Node n1 = twoNodes[0];
+         head = n1;
+         Node n2 = reverseLL(twoNodes[1]);
+         Node on = n1.next;
+         Node tn = n2.next;
+         
+         while(on!=null&&tn!=null){
+             n1.next=n2;
+             n2.next=on;
+             n1=on;
+             on=on.next;
+             n2=tn;
+             tn=tn.next;
          }
+         n1.next=n2;
+         n2.next=on;
          
-         return modular;
+         return head;
+         
          
      }
+     
+     static Node[] split(Node head){
+         Node slow=head;
+         Node prev=null;
+         Node fast=head;
+         
+         while(fast!=null&&fast.next!=null){
+             prev=slow;
+             slow=slow.next;
+             fast=fast.next.next;
+         }
+        if(fast!=null){
+            prev=slow;
+            slow=slow.next;
+        }
+        prev.next=null;
+        return new Node[]{head,slow};
+     }
+     public static Node reverseLL(Node head){
+         Node prev = null;
+         Node curr = head;
+         while(curr!=null){
+             Node nex = curr.next;
+             curr.next = prev;
+             prev = curr;
+             curr = nex;
+         }
+         return prev;
+     }
+ 
+     //
+ 
      // -----------------------------------------------------
  
      static Node head1;
@@ -36,9 +79,8 @@ import java.util.*;
              tail = insert(tail, a);
          }
  
-         int k = sc.nextInt();
- 
-         System.out.println(moduarNode(head1, k));
+         head1 = rearrange(head1);
+         display(head1);
  
      }
  
@@ -55,7 +97,7 @@ import java.util.*;
      }
  
      /*
-      * Input Parameters: tail: tail of the linked list in which a new node is to
+      * Input Parameters: tail: head of the linked list in which a new node is to
       * be inserted. data: the data value of the node which is to be inserted.
       * 
       * Return Value: tail of the linked list/the node that is inserted

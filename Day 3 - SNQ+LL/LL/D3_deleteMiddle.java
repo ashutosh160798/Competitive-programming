@@ -1,42 +1,30 @@
 import java.util.*;
  
- public class Main {
+ public class D3_deleteMiddle {
  
      // -----------------------------------------------------
      // This is a functional problem. You have to complete this function.
-     // This function takes as input the head of the linked list and key.
+     // This function takes as input the head of the linked list.
      // It should return the head of the modified list.
- 
-     public static Node func(Node head, int key) {
+     public static Node Delete(Node head) {
          
-         head = reverseLL(head);
+         if(head.next==null){
+             return null;
+         }
+         
+         Node slow = head;
+         Node fast = head;
          Node prev = null;
-         Node curr = head;
-         if(curr.data==key){
-             head = head.next;
-             return reverseLL(head);
+         while(fast!=null&&fast.next!=null){
+             prev = slow;
+             slow = slow.next;
+             fast = fast.next.next;
          }
-         while(curr!=null){
-             if(curr.data==key){
-                 prev.next = curr.next;
-                 break;
-             }
-             prev = curr;
-             curr = curr.next;
-         }
-         return reverseLL(head);
-     }
-     
-     public static Node reverseLL(Node head){
-         Node prev = null;
-         Node curr = head;
-         while(curr!=null){
-             Node nex = curr.next;
-             curr.next = prev;
-             prev = curr;
-             curr = nex;
-         }
-         return prev;
+         prev.next = slow.next;
+         slow.next = null;
+         return head;
+         
+         
      }
  
      // -----------------------------------------------------
@@ -56,9 +44,9 @@ import java.util.*;
              tail = insert(tail, a);
          }
  
-         int k = sc.nextInt();
-         head1 = func(head1, k);
+         head1 = Delete(head1);
          display(head1);
+ 
      }
  
      // Class declaration for a Node of the Linked List
@@ -97,11 +85,9 @@ import java.util.*;
       * Return Value: null
       */
      public static void display(Node head) {
- 
          for (Node node = head; node != null; node = node.next) {
              System.out.print(node.data + " ");
          }
- 
          System.out.println();
      }
  

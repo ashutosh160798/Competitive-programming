@@ -1,6 +1,6 @@
 import java.util.*;
  
- class Main {
+ class D3_cloneList {
  
      static class Node {
          int data;
