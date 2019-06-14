@@ -1,6 +1,6 @@
 import java.util.Scanner;
   
-  public class Main{
+  public class D3_mustang{
   
   	  public static int mustangTour(int[] petrol,int[] dist){
   	      

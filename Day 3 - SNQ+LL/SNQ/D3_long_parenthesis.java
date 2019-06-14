@@ -2,7 +2,7 @@ import java.util.*;
   import java.lang.*;
   import java.io.*;
   
-  class Main {
+  class D3_long_parenthesis {
       public static int longestParenthesis(String s){
           
           Stack<Character> bracketStack = new Stack<>();

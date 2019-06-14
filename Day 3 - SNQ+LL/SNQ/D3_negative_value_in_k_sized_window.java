@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D3_negative_value_in_k_sized_window {
  	 
  	 public  static void window(int[] arr, int k){
  	     

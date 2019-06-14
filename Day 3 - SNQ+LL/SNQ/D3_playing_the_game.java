@@ -1,6 +1,6 @@
 import java.util.*;
  import java.util.Scanner;
- public class Main{
+ public class D3_playing_the_game{
  	  public static int calculatePoints(String[] ops) {
  	      
  	      Stack <Integer> st = new Stack<>();

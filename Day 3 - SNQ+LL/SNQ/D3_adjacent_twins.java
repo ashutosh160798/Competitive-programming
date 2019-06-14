@@ -1,6 +1,6 @@
 import java.util.*;
  
- public class Main {
+ public class D3_adjacent_twins {
  	 public static void removeAdjTwins(String s) {
  	     
  	     Stack <Character> st = new Stack<>();

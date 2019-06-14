@@ -3,7 +3,7 @@ import java.util.Scanner;
  //User function Template for Java
  // your task is to complete the function
  // function should return true/false or 1/0
- class Main {
+ class D3_consecutive_pairs_in_an_array {
  	 public static boolean pairWiseConsecutive(Stack<Integer> st) {
  	     
  	     if(st.size()%2==1){

@@ -2,7 +2,7 @@ import java.util.LinkedList;
  import java.util.Queue;
  import java.util.Scanner;
  
- class Main{
+ class D3_number_of_fetches{
  	 // Complete the functions
  	 static class RecentFetch {
      	 static Queue<Integer>  q = new LinkedList<>();
