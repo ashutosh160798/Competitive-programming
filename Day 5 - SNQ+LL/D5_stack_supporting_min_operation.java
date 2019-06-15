@@ -1,6 +1,6 @@
 import java.util.*;
  import java.util.Scanner;
- public class Main {
+ public class D5_stack_supporting_min_operation {
      
      static int minEle;
      static Stack<Integer> s=new Stack<>();

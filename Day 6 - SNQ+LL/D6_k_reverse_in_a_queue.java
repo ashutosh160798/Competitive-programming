@@ -1,5 +1,5 @@
 import java.util.*;
- public class Main { 
+ public class D6_k_reverse_in_a_queue {
  
  
  	 // Function to reverse the first K elements 

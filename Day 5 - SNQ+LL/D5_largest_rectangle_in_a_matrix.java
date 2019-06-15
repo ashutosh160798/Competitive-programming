@@ -1,7 +1,7 @@
 import java.util.Scanner;
  import java.util.Stack;
  
- public class Main {
+ public class D5_largest_rectangle_in_a_matrix {
   
  public static int maxrect(int arr[][]){
      int max = 0;

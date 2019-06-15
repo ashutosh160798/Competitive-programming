@@ -1,6 +1,6 @@
 import java.util.*;
  
- class Main {
+ class D6_celebrity_party {
  
      static int getId(int M[][], int n) {
          

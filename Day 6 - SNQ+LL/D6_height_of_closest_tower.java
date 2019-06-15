@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D6_height_of_closest_tower {
  
  	 public static int heightClosestTower(int[] A){
  	     

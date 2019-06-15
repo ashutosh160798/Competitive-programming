@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D6_connecting_ropes {
  	 public static long minCostRopes(long[] arr) {
  	     
  	     PriorityQueue<Long> q = new PriorityQueue<>();

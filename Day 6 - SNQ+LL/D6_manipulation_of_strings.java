@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D6_manipulation_of_strings {
  	 
  	 public static int stringManipulation(String[] S){
  	     

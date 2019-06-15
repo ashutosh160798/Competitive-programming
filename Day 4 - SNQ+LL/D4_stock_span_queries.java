@@ -1,5 +1,5 @@
 import java.util.*;
-  class Main{
+  class D4_stock_span_queries{
   static class StockSpanner {
   // Complete the functions
   

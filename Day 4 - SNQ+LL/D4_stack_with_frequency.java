@@ -3,7 +3,7 @@ import java.util.HashMap;
   import java.util.Scanner;
   import java.util.Stack;
   
-  class Main{
+  class D4_stack_with_frequency{
   private static class FreqStack {
       // Write your code 
       static int maxFreq=0;

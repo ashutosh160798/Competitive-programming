@@ -1,5 +1,5 @@
 import java.util.*;
- class Main {
+ class D6_absolute_canonical_path {
      public static String absoluteCanonicalPath(String s) {
          
          Stack<String> st = new Stack<>();

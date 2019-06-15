@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D4_bracket_position {
          public static void printBracketsPos(String s){
              
              Stack<Integer>st = new Stack<>();

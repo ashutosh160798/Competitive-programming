@@ -1,7 +1,7 @@
 import java.util.*;
   import java.util.Scanner;
   
-  public class Main {
+  public class D6_remove_to_make_smallest {
   
       public static String removeMakeSmallest(String num, int k) {
           

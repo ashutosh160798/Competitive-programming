@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D4_rotation_of_cards {
  
      public static void cardRotation(int N) {
          

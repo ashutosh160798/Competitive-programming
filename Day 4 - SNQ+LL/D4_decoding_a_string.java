@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class D4_decoding_a_string {
  
  public static String decode(String s) {
      

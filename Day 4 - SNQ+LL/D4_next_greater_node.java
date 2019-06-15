@@ -1,5 +1,5 @@
 import java.util.*;
- public class Main {
+ public class D4_next_greater_node {
  	 /* Structure of ListNode
  	 	 ListNode {
  	 	       int val;

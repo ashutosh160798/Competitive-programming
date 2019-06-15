@@ -1,6 +1,6 @@
 import java.util.*;
   import java.io.*;
-  public class Main {
+  public class D5_decode_string_at_index {
   	   public static Character decodeIndex(String str, int k) {
   	       int size = 0;
   	       for(int i=0;i<str.length();i++){

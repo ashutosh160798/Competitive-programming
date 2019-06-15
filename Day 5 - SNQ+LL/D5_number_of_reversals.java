@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D5_number_of_reversals {
    	 public static int min_str_reversal(String s){
    	     
    	     Stack <Character> st = new Stack<>();

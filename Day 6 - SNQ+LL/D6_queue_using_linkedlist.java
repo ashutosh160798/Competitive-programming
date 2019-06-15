@@ -1,6 +1,6 @@
 import java.util.Scanner;
  
- class Main{
+ class D6_queue_using_linkedlist{
  /*The structure of the node of the queue is
  class QueueNode
  {

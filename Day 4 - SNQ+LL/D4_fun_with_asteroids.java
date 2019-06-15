@@ -1,6 +1,6 @@
 import java.util.*;
  import java.io.*;
- public class Main {
+ public class D4_fun_with_asteroids {
  	  public static int[] asteroidCollision(int[] asteroids) {
  	      
  	      Stack<Integer>st = new Stack<>();

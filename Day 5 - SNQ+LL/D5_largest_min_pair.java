@@ -2,7 +2,7 @@ import java.util.*;
   import java.lang.*;
   import java.io.*;
   
-  class Main {
+  class D5_largest_min_pair {
       public static long findlargest(long arr[],int n){
           
           long maxSum = 0;

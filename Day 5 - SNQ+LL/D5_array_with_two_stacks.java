@@ -13,7 +13,7 @@ import java.util.Scanner;
  	 	 top2 = size;
  	 }
  }*/
- class Main
+ class D5_array_with_two_stacks
  {
      // sq is the object of class TwoStack
      /* The method push to push element into the stack 2 */

@@ -1,6 +1,6 @@
 import java.util.*;
  
- class Main {
+ class D6_reversal_of_queue {
  
      public static Queue<Integer> rev(Queue<Integer> q) {
          
