@@ -3,7 +3,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- public class Main {
+ public class D7_rotten_tomatoes {
      
      public static class Helper{
         public int i,j,time;

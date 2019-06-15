@@ -1,6 +1,6 @@
 import java.util.*;
  
- class Main {
+ class D7_stack_using_array {
  
  
  static class MyStack{

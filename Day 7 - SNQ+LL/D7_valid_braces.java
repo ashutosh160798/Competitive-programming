@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D7_valid_braces {
      public static void isbal(String s){
          
          

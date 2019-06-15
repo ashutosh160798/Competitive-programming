@@ -1,5 +1,5 @@
 import java.util.*;
- public class Main { 
+ public class D7_score_of_the_string {
  
     public static int scoreOfParentheses(String s) {
         

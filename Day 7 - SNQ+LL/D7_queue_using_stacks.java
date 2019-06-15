@@ -1,7 +1,7 @@
 import java.util.*;
  import java.util.*;
  
- public class Main {
+ public class D7_queue_using_stacks {
  
      static class queUsingStack {
  

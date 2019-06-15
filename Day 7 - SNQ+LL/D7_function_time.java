@@ -1,6 +1,6 @@
 import java.util.*;
  
- public class Main {
+ public class D7_function_time {
  
      public static int[] exclusiveTime(int n, List<String> logs) {
          

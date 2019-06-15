@@ -1,6 +1,6 @@
 import java.util.*;
  
- public class Main {
+ public class D7_making_parentheses_valid {
  
      public static int minAddToMakeValid(String s) {
          

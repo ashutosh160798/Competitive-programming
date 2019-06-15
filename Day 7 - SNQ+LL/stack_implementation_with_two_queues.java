@@ -1,5 +1,7 @@
-import java.util.*;
- class Main
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+ class stack_implementation_with_two_queues
  {
      static Queue<Integer> dq = new LinkedList<Integer>();
      static Queue<Integer> hq = new LinkedList<Integer>();

@@ -1,6 +1,6 @@
 import java.util.*;
  
- class Main {
+ class D7_killing_process {
  
      public static List<Integer> killProcess(List<Integer> pid, List<Integer> ppid, int kill) {
          

@@ -1,5 +1,5 @@
 import java.util.*;
- public class Main {
+ public class D7_next_greater_circular {
  
      public static int[] nextGreaterCircularInManner(int[] nums) {
        

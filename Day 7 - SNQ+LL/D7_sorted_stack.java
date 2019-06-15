@@ -1,6 +1,6 @@
 import java.util.*; 
  
- class Main 
+ class D7_sorted_stack
  { 
  	 // This function return the sorted stack 
  	 public static Stack<Integer> sortstack(Stack<Integer> 

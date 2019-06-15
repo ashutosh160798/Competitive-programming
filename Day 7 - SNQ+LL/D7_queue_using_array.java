@@ -1,6 +1,6 @@
 import java.util.Scanner;
  
- class Main{
+ class D7_queue_using_array{
  static class MyQueue {
  	 static int front, rear;
  	 static int arr[] = new int[1000];

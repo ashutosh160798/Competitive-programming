@@ -1,5 +1,5 @@
 import java.util.*;
- class Main{
+ class D7_operations_in_queue{
      static HashMap<Integer,Integer> map = new HashMap<>();
      static void insert(Queue<Integer> q, int k){
          

@@ -1,5 +1,5 @@
 import java.util.*; 
- class Main { 
+ class D7_nearmost_left_smaller_number {
  
  	 static void printNearmostLeftSmaller(int arr[], int n) { 
  	     

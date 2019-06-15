@@ -1,6 +1,6 @@
 import java.util.*;
  
- class Main {
+ class D7_parsing_ternary_expression {
  
      public static String parseTernary(String s) {
          

@@ -2,7 +2,7 @@ import java.util.*;
  import java.lang.*;
  import java.io.*;
  
- class Main {
+ class D7_remove_digits_that_are_repeated {
  	 static long removeRep(long n) 
  	 {
             String s = n+"";
