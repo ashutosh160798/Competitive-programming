@@ -1,3 +1,5 @@
+package SNQ;
+
 import java.util.*;
  class D7_operations_in_queue{
      static HashMap<Integer,Integer> map = new HashMap<>();

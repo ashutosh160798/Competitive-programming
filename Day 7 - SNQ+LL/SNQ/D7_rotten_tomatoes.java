@@ -1,3 +1,5 @@
+package SNQ;
+
 import java.util.*;
  import java.util.Scanner;
  import java.lang.*;

@@ -1,3 +1,5 @@
+package SNQ;
+
 import java.util.*;
  
  class D7_parsing_ternary_expression {

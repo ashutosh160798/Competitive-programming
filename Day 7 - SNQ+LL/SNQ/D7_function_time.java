@@ -1,3 +1,5 @@
+package SNQ;
+
 import java.util.*;
  
  public class D7_function_time {
