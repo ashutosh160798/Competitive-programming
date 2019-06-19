@@ -12,7 +12,7 @@ public class D9_pair_sum_divisibility {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < 0) {
-                arr[i] = arr[i] / k + k;
+                arr[i] = arr[i] % k + k;
             }
 
             map.put(arr[i] % k, map.getOrDefault(arr[i] % k, 0) + 1);
