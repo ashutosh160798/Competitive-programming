@@ -29,8 +29,9 @@ public class D8_find_duplicate_in_system {
                 }
             }
         }
-
-        for(String key: map.keySet()){
+        ArrayList<String> keySorted = new ArrayList<>(map.keySet());
+        Collections.sort(keySorted);
+        for(String key: keySorted){
             ans.add(map.get(key));
         }
         return ans;
