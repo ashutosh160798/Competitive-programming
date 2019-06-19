@@ -14,7 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Day 11 - HM+Heap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/HashMap + Heap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SNQ" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Stack + Queue" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
