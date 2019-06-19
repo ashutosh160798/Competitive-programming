@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.Scanner;
 
 public class D3_tiny_big_tiny {

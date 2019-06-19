@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.*;
  import java.util.*;
  

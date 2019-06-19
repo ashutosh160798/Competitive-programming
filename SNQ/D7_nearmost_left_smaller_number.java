@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.*;
  class D7_nearmost_left_smaller_number {
  

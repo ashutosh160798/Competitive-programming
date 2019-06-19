@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.Scanner;
  
  class D7_queue_using_array{

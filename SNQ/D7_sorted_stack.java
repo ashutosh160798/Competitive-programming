@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.*;
  
  class D7_sorted_stack

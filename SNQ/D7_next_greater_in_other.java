@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.*;
  public class D7_next_greater_in_other {
  	  public static int[] nextGreaterOther(int[] nums1, int[] nums2) {

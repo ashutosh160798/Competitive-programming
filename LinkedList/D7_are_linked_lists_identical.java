@@ -1,5 +1,3 @@
-package LL;
-
 import java.util.Scanner;
 
 public class D7_are_linked_lists_identical {

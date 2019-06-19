@@ -10,6 +10,11 @@
       <sourceFolder url="file://$MODULE_DIR$/Day 3 - SNQ+LL" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Day 8 - HM+Heaps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Day 9 - HM+Heaps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Day 10 - HM+Heaps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Day 11 - HM+Heap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/HashMap + Heap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SNQ" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

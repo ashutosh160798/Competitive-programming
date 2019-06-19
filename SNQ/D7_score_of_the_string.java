@@ -1,5 +1,3 @@
-package SNQ;
-
 import java.util.*;
  public class D7_score_of_the_string {
  
