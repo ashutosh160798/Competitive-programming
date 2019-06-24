@@ -6,27 +6,29 @@ public class D14_longest_k_unique_character_substring {
 
     public static void print(String str, int k) {
 
-        HashMap<Character, Integer> map = new HashMap<>();
-        int i = 0;
-        int j = 0;
-        int length = 0;
-        while (i < str.length() && j < str.length()) {
-            while (i < str.length() && map.size() <= k) {
-                map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0) + 1);
-                i++;
-            }
-            length = Math.max(length, i - j);
-            while (j < str.length() && map.size() >= k) {
-                if (map.get(str.charAt(j)) == 1) {
-                    map.remove(str.charAt(j));
-                } else {
-                    map.put(str.charAt(j), map.get(str.charAt(j)) - 1);
-                }
-                j++;
-            }
+        HashMap<Character,Integer> map = new HashMap<>();
+        int len=0;
+        int st=0;
+        int uniqueUptilNow=0;
+        for (int i = 0; i < str.length(); i++) {
+            char curr = str.charAt(i);
+            map.put(curr, map.getOrDefault(curr, 0) + 1);
 
+            if (map.size() == k + 1) {
+                //release
+
+                while (map.size() != k) {
+                    map.put(str.charAt(st), map.get(str.charAt(st)) - 1);
+                    if (map.get(str.charAt(st)) == 0) {
+                        map.remove(str.charAt(st));
+                    }
+                    st++;
+                }
+            }
+            if (map.size() == k)
+                len = len < i - st + 1 ? i - st + 1 : len;
         }
-        System.out.print(length);
+        System.out.println(len);
 
     }
 
