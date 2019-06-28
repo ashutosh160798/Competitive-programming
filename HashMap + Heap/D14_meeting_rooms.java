@@ -10,6 +10,8 @@ public class D14_meeting_rooms {
         int[] start = new int[intervals.length];
         int[] end = new int[intervals.length];
         for (int i = 0; i < intervals.length; i++) {
+            if(intervals[i][0]>intervals[i][1])
+                continue;
             start[i] = intervals[i][0];
             end[i] = intervals[i][1];
         }
