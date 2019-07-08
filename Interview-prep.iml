@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Stack + Queue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Test3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Arrays + Strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DP" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
