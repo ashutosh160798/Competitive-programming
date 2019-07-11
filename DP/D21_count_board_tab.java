@@ -12,15 +12,15 @@ public class D21_count_board_tab {
     }
 
     private static int count(int src, int dest, int[] dp) {
-        if(src>dest)
+        if (src > dest)
             return 0;
         dp[dest] = 1;
         for (int i = dest - 1; i >= src; i--) {
-            for (int j=1;j<=6;j++){
-                int step = i+j;
-                if(i+j>dest)
+            for (int j = 1; j <= 6; j++) {
+                int step = i + j;
+                if (i + j > dest)
                     continue;
-                dp[i]+=dp[step];
+                dp[i] += dp[step];
             }
         }
         return dp[src];

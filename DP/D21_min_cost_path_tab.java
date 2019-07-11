@@ -20,7 +20,7 @@ public class D21_min_cost_path_tab {
 
         int rows = costs.length;
         int cols = costs[0].length;
-        int dp[][] = new int[rows][cols];
+        int[][] dp = new int[rows][cols];
         int sum = 0;
         for (int i = rows - 1; i >= 0; i--) {
             sum += costs[i][cols - 1];

@@ -17,7 +17,7 @@ public class D21_palindrome_substring {
         }
         for (int i = 1; i < dp.length; i++) {
             if (str.charAt(i) == str.charAt(i - 1)) {
-                dp[i-1][i] = true;
+                dp[i - 1][i] = true;
                 ans++;
             }
         }

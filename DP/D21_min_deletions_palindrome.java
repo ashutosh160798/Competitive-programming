@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class D21_min_deletions_palindrome {
 
@@ -19,17 +19,16 @@ public class D21_min_deletions_palindrome {
 
         for (int g = 0; g < str.length(); g++) {
             for (int i = 0, j = g; j < str.length(); i++, j++) {
-                if(i==j){
+                if (i == j) {
                     dp[i][i] = 1;
-                }
-                else if(str.charAt(i)==str.charAt(j)){
-                    dp[i][j] = 2+dp[i+1][j-1];
-                }else {
-                    dp[i][j] = Math.max(dp[i+1][j],dp[i][j-1]);
+                } else if (str.charAt(i) == str.charAt(j)) {
+                    dp[i][j] = 2 + dp[i + 1][j - 1];
+                } else {
+                    dp[i][j] = Math.max(dp[i + 1][j], dp[i][j - 1]);
                 }
             }
         }
-        System.out.println(str.length()-dp[0][str.length()-1]);
+        System.out.println(str.length() - dp[0][str.length() - 1]);
 
 
     }

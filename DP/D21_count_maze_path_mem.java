@@ -17,7 +17,7 @@ public class D21_count_maze_path_mem {
             return 1;
         if (sc > dc || sr > dr)
             return 0;
-        if(dp[sr][sc]!=0)
+        if (dp[sr][sc] != 0)
             return dp[sr][sc];
         int ans = 0;
         int v = count(sr + 1, sc, dr, dc, dp);

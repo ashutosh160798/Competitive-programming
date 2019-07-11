@@ -1,11 +1,11 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class D21_min_deletion_to_make_sorted {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        int a[] = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++)
             a[i] = scn.nextInt();
         mindeletions(a, n);
@@ -18,7 +18,7 @@ public class D21_min_deletion_to_make_sorted {
 
     static void mindeletions(int[] a, int n) {
 
-        System.out.println(a.length-lis(a));
+        System.out.println(a.length - lis(a));
 
     }
 
@@ -28,16 +28,16 @@ public class D21_min_deletion_to_make_sorted {
         helper[0] = 1;
         for (int i = 1; i < arr.length; i++) {
             int max = 0;
-            for(int j=i-1;j>=0;j--){
-                if(arr[j]<arr[i]){
-                    max = Math.max(max,helper[j]);
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[j] < arr[i]) {
+                    max = Math.max(max, helper[j]);
                 }
             }
-            helper[i] = max+1;
+            helper[i] = max + 1;
         }
         int ans = -1;
-        for(int i=0;i<helper.length;i++){
-            ans = Math.max(ans,helper[i]);
+        for (int i = 0; i < helper.length; i++) {
+            ans = Math.max(ans, helper[i]);
         }
 
         return ans;

@@ -1,9 +1,11 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class D21_2_key_keyboard {
 
     public static void main(String[] args) {
-        Scanner scn= new Scanner(System.in);
-        int n=scn.nextInt();
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
         System.out.println(_2KeysKeyboard(n));
     }
 
@@ -25,7 +27,7 @@ public class D21_2_key_keyboard {
         }
         int ans = 0;
         for (int key : map.keySet()) {
-            ans += key*map.get(key);
+            ans += key * map.get(key);
         }
         return ans;
     }

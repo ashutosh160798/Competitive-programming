@@ -17,7 +17,7 @@ public class D21_count_board_mem {
             return 0;
         if (src == dest)
             return 1;
-        if(dp[src]!=0)
+        if (dp[src] != 0)
             return dp[src];
 
         int stod = 0;
