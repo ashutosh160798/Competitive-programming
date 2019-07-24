@@ -22,7 +22,7 @@ public class D21_min_deletion_to_make_sorted {
 
     }
 
-    public static int lis(int[] arr) {
+    static int lis(int[] arr) {
 
         int[] helper = new int[arr.length];
         helper[0] = 1;
