@@ -1,42 +1,43 @@
 import java.util.Scanner;
 
-class Node {
-    int data;
-    Node left, right;
-
-    Node(int item) {
-        data = item;
-        left = right = null;
-    }
-}
-
-class BinaryTree {
-
-    private static int max = Integer.MIN_VALUE;
-
-    int maxPathSum(Node root) {
-
-        l2lsum(root);
-        return max;
-    }
-
-    private int l2lsum(Node root) {
-        if (root == null)
-            return 0;
-
-        int ll = l2lsum(root.left);
-        int rl = l2lsum(root.right);
-        int rv = Math.max(ll, rl) + root.data;
-
-        max = Math.max(max, ll + rl + root.data);
-
-        return rv;
-
-    }
-
-}
 
 public class max_path_sum_l2l {
+    static class Node {
+        int data;
+        Node left, right;
+
+        Node(int item) {
+            data = item;
+            left = right = null;
+        }
+    }
+
+    static class BinaryTree {
+
+        private static int max = Integer.MIN_VALUE;
+
+        int maxPathSum(Node root) {
+
+            l2lsum(root);
+            return max;
+        }
+
+        private int l2lsum(Node root) {
+            if (root == null)
+                return 0;
+
+            int ll = l2lsum(root.left);
+            int rl = l2lsum(root.right);
+            int rv = Math.max(ll, rl) + root.data;
+
+            max = Math.max(max, ll + rl + root.data);
+
+            return rv;
+
+        }
+
+    }
+
     public static void insert(Node root, int a, int a1, char lr) {
         if (root == null) {
             return;
