@@ -1,27 +1,32 @@
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class binary_tree_max_path_sum {
-
-    static int max = Integer.MIN_VALUE;
+public class binary_tree_paths {
 
     // This is a functional problem. You have to complete this function.
     // It takes as input the root node of a binary tree. It should return
-    // the maximum path sum.
+    // an arraylist containing all root-to-leaf paths in any order.
+    private static ArrayList<String> ans;
 
-    public static int maxPathSum(TreeNode root) {
+    private static ArrayList<String> binaryTreePaths(TreeNode root) {
+        ans = new ArrayList<>();
+        paths(root, "");
+        return ans;
+    }
 
+    private static void paths(TreeNode root, String psf) {
         if (root == null)
-            return 0;
+            return;
 
-        int ll = maxPathSum(root.left);
-        int rl = maxPathSum(root.right);
-
-        int rv = Math.max(root.val, Math.max(ll, rl) + root.val);
-
-        max = Math.max(max, Math.max(ll + rl + root.val, Math.max(root.val, Math.max(ll + root.val, rl + root.val))));
-
-        return rv;
+        psf = psf + root.val + "->";
+        if (root.left == null && root.right == null) {
+            ans.add(psf.substring(0, psf.length() - 2));
+            return;
+        }
+        paths(root.left, psf);
+        paths(root.right, psf);
 
     }
 
@@ -31,8 +36,13 @@ public class binary_tree_max_path_sum {
 
         Integer[] treeArr = inputSplitSpace(input);
         TreeNode root = createTree(treeArr);
-        maxPathSum(root);
-        System.out.println(max);
+
+        ArrayList<String> result = binaryTreePaths(root);
+        Collections.sort(result);
+        for (String s : result) {
+            System.out.println(s);
+        }
+
     }
 
     // utility function to display a binary tree.

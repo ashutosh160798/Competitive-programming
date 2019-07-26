@@ -1,28 +1,22 @@
 import java.util.ArrayDeque;
 import java.util.Scanner;
 
-public class binary_tree_max_path_sum {
-
-    static int max = Integer.MIN_VALUE;
+public class binary_tree_pruning {
 
     // This is a functional problem. You have to complete this function.
-    // It takes as input the root node of a binary tree. It should return
-    // the maximum path sum.
-
-    public static int maxPathSum(TreeNode root) {
+    // It takes as input the root node of the given tree. It should return the root
+    // of the pruned tree.
+    public static TreeNode pruneTree(TreeNode root) {
 
         if (root == null)
-            return 0;
+            return null;
 
-        int ll = maxPathSum(root.left);
-        int rl = maxPathSum(root.right);
-
-        int rv = Math.max(root.val, Math.max(ll, rl) + root.val);
-
-        max = Math.max(max, Math.max(ll + rl + root.val, Math.max(root.val, Math.max(ll + root.val, rl + root.val))));
-
-        return rv;
-
+        root.left = pruneTree(root.left);
+        root.right = pruneTree(root.right);
+        if (root.right == null && root.left == null && root.val == 0) {
+            return null;
+        }
+        return root;
     }
 
     public static void main(String[] args) {
@@ -31,8 +25,10 @@ public class binary_tree_max_path_sum {
 
         Integer[] treeArr = inputSplitSpace(input);
         TreeNode root = createTree(treeArr);
-        maxPathSum(root);
-        System.out.println(max);
+
+        TreeNode resultRoot = pruneTree(root);
+        display(resultRoot);
+
     }
 
     // utility function to display a binary tree.

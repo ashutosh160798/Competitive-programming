@@ -1,28 +1,28 @@
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class binary_tree_max_path_sum {
-
-    static int max = Integer.MIN_VALUE;
+public class binary_tree_postorder {
 
     // This is a functional problem. You have to complete this function.
-    // It takes as input the root node of a binary tree. It should return
-    // the maximum path sum.
+    // It takes as input the root node of the given tree. It should return an
+    // arraylist containing the postorder traversal.
+    static ArrayList<Integer> al;
 
-    public static int maxPathSum(TreeNode root) {
+    public static ArrayList<Integer> postorderTraversal(TreeNode node) {
 
-        if (root == null)
-            return 0;
+        al = new ArrayList<>();
+        postOrder(node);
+        return al;
+    }
 
-        int ll = maxPathSum(root.left);
-        int rl = maxPathSum(root.right);
+    private static void postOrder(TreeNode node) {
+        if (node == null)
+            return;
 
-        int rv = Math.max(root.val, Math.max(ll, rl) + root.val);
-
-        max = Math.max(max, Math.max(ll + rl + root.val, Math.max(root.val, Math.max(ll + root.val, rl + root.val))));
-
-        return rv;
-
+        postOrder(node.left);
+        postOrder(node.right);
+        al.add(node.val);
     }
 
     public static void main(String[] args) {
@@ -31,8 +31,13 @@ public class binary_tree_max_path_sum {
 
         Integer[] treeArr = inputSplitSpace(input);
         TreeNode root = createTree(treeArr);
-        maxPathSum(root);
-        System.out.println(max);
+
+        ArrayList<Integer> result = postorderTraversal(root);
+        for (Integer i : result) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
     }
 
     // utility function to display a binary tree.
